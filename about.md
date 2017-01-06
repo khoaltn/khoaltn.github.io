@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I'm currently an undergraduate student at the College of Wooster, double-majoring in computer science and mathematics. My special interests are in cybersecurity and cryptography. I will be working as a Software Engineering Intern at Intuit this coming summer 2017 in Mountain View, California.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+Here's my Github repositories at [github.com/nguyen-khoa](https://github.com/nguyen-khoa/)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Because I'm not much of a web designer, this personal website is built based on the Indigo Jekyll template posted on [github.com/jekyll/jekyll/wiki/Themes](https://github.com/jekyll/jekyll/wiki/Themes). A lot of thanks to this theme's author and the Jekyll team!

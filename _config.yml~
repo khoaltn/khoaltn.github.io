@@ -14,26 +14,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-# WEBSITE
-title: "Khoa Nguyen"
+title: Khoa's Personal Page #'
+author: Khoa LT Nguyen
+email: knguyen18@wooster.edu
 description: > # this means to ignore newlines until "baseurl:"
-  "I'm a tech nerd, and I'm proud of it."
+  I'm a tech nerd, and I'm proud of it.
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-keywords: "Khoa LT Nguyen, Khoa Nguyen, Khoa, knguyen18, gh-pages, github"
-
-# AUTHOR
-author: Khoa LT Nguyen
-email: knguyen18@wooster.edu
 twitter_username: nguyen_khoa18
 github_username:  nguyen-khoa
 linkedin_username: nguyen-khoa
 
 # Build settings
-highlighter: rouge
 markdown: kramdown
 theme: minima
 gems:
