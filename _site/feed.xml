@@ -1,9 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-06T10:05:29-05:00</updated><id>http://localhost:4000//</id><title type="html">Khoa Nguyen</title><subtitle>&quot;I'm a tech nerd, and I'm proud of it.&quot;
-</subtitle><author><name>Khoa LT Nguyen</name></author><entry><title type="html">What I’ve Learned After My Interview at Facebook</title><link href="http://localhost:4000/interviews/2016/03/30/facebook-interview.html" rel="alternate" type="text/html" title="What I've Learned After My Interview at Facebook" /><published>2016-03-30T23:41:19-04:00</published><updated>2016-03-30T23:41:19-04:00</updated><id>http://localhost:4000/interviews/2016/03/30/facebook-interview</id><content type="html" xml:base="http://localhost:4000/interviews/2016/03/30/facebook-interview.html">&lt;p&gt;Near the end of spring break of my sophomore year in college, I flew to California to be interviewed onsite for Facebook University for Analytics 2016. As a freshman I was rejected first round when applying for Facebook University for Engineering, so it was quite an excitement to actually make it to Facebook headquarters this year, even if it was only an interview trip and not an offer. I learned a lot, but this post will only contain the highlights.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-01-06T11:22:54-05:00</updated><id>http://localhost:4000//</id><title type="html">Khoa Nguyen</title><subtitle>&quot;I'm a tech nerd, and I'm proud of it.&quot;
+</subtitle><author><name>Khoa LT Nguyen</name></author><entry><title type="html">Leetcode #373: Find K Pairs with Smallest Sums</title><link href="http://localhost:4000/leetcode/2016/07/22/find-k-pairs-smallest-sums.html" rel="alternate" type="text/html" title="Leetcode #373: Find K Pairs with Smallest Sums" /><published>2016-07-22T23:41:19-04:00</published><updated>2016-07-22T23:41:19-04:00</updated><id>http://localhost:4000/leetcode/2016/07/22/find-k-pairs-smallest-sums</id><content type="html" xml:base="http://localhost:4000/leetcode/2016/07/22/find-k-pairs-smallest-sums.html">&lt;h6 id=&quot;problem-source-httpsleetcodecomproblemsfind-k-pairs-with-smallest-sums-&quot;&gt;Problem source: &lt;a href=&quot;https://leetcode.com/problems/find-k-pairs-with-smallest-sums/&quot;&gt;https://leetcode.com/problems/find-k-pairs-with-smallest-sums/&lt;/a&gt; *&lt;/h6&gt;
+
+&lt;h4 id=&quot;problem-statement&quot;&gt;Problem Statement:&lt;/h4&gt;
+&lt;p&gt;You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k. 
+Define a pair (u,v) which consists of one element from the first array and one element from the second array.
+Find the k pairs (u1,v1),(u2,v2) …(u~k~, v~k~) with the smallest sums.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example&lt;/em&gt;:
+Given nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+Return: [1,2],[1,4],[1,6]&lt;/p&gt;
+
+&lt;h4 id=&quot;solution&quot;&gt;Solution:&lt;/h4&gt;
+&lt;p&gt;We know from mathematics that there will be n1 * n2 possible pairs where n1, n2 are the sizes of nums1 and nums2 respectively. As a human, we will naturally match each element in nums1 to all the elements in nums2 to create a list of all possible pairs, sort them, and then output the k pairs. This surely results in a correct solution, but performs too many unnecessary computations if k &amp;lt; n1*n2. So the idea for a faster solution here is to keep track of how many elements of nums2 we have matched each element of nums1 with, then find the next smallest pair from all possible pairs of (u, v) where u is an element of nums1 and v is its next corresponding element in nums2 until we have found k pairs or exhausted all the possible pairs.&lt;/p&gt;
+
+&lt;p&gt;Here is the complete code in C++ with detailed comments and explanations:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kSmallestPairs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                                      &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//sort(nums1.begin(), nums1.end());  //the lists are already sorted
+&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//sort(nums2.begin(), nums2.end());
+&lt;/span&gt;	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/* this array tracks the index of the next element in nums2
+	to match with each element in nums1 */&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;          
+    &lt;span class=&quot;n&quot;&gt;memset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// set all indices in other[] to 0
+&lt;/span&gt;    &lt;span class=&quot;cm&quot;&gt;/* min is the index of the current smallest element in nums1 
+	that hasn't finished matching with all elements in nums2. */&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/* 2 cases when the loop stops: (1) we find all k pairs; or
+      (2) we find every possible pair that can be made from nums1 and nums2. */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;cm&quot;&gt;/* first, second form the next smallest pair. 
+		index contains the index of first in nums1 */&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;cm&quot;&gt;/* this loop finds all the possible candidates to be the next 
+		smallest pair and compares them to the current one */&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//cout &amp;lt;&amp;lt; first &amp;lt;&amp;lt; &quot; ; &quot; &amp;lt;&amp;lt; second &amp;lt;&amp;lt; endl;
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Update min if nums1[min] has matched with all the elements of nums2
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;min&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Khoa LT Nguyen</name></author><summary type="html">Problem source: https://leetcode.com/problems/find-k-pairs-with-smallest-sums/ *
+
+Problem Statement:
+You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k. 
+Define a pair (u,v) which consists of one element from the first array and one element from the second array.
+Find the k pairs (u1,v1),(u2,v2) …(u~k~, v~k~) with the smallest sums.
+
+Example:
+Given nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+Return: [1,2],[1,4],[1,6]
+
+Solution:
+We know from mathematics that there will be n1 * n2 possible pairs where n1, n2 are the sizes of nums1 and nums2 respectively. As a human, we will naturally match each element in nums1 to all the elements in nums2 to create a list of all possible pairs, sort them, and then output the k pairs. This surely results in a correct solution, but performs too many unnecessary computations if k &amp;lt; n1*n2. So the idea for a faster solution here is to keep track of how many elements of nums2 we have matched each element of nums1 with, then find the next smallest pair from all possible pairs of (u, v) where u is an element of nums1 and v is its next corresponding element in nums2 until we have found k pairs or exhausted all the possible pairs.
+
+Here is the complete code in C++ with detailed comments and explanations:
+
+vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; kSmallestPairs(vector&amp;lt;int&amp;gt;&amp;amp; nums1, vector&amp;lt;int&amp;gt;&amp;amp; nums2, 
+                                      int k) {
+    vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; result;
+    int n1 = nums1.size(), n2 = nums2.size();
+    if (n1 == 0 || n2 == 0) return result;
+    //sort(nums1.begin(), nums1.end());  //the lists are already sorted
+	//sort(nums2.begin(), nums2.end());
+	int count = 0;
+    /* this array tracks the index of the next element in nums2
+	to match with each element in nums1 */
+    int* other = new int[n1];          
+    memset(other, 0, sizeof(int) * n1);  // set all indices in other[] to 0
+    /* min is the index of the current smallest element in nums1 
+	that hasn't finished matching with all elements in nums2. */
+    int min = 0, first, second, index;
+    /* 2 cases when the loop stops: (1) we find all k pairs; or
+      (2) we find every possible pair that can be made from nums1 and nums2. */
+    while (count &amp;lt; k &amp;amp;&amp;amp; count &amp;lt; n1 * n2) {
+        /* first, second form the next smallest pair. 
+		index contains the index of first in nums1 */
+        first = nums1[min];
+        second = nums2[other[min]];
+        index = min;
+        /* this loop finds all the possible candidates to be the next 
+		smallest pair and compares them to the current one */
+        for (int i = min + 1; i &amp;lt; n1; i++) {
+            if (nums1[i] + nums2[other[i]] &amp;lt; first + second) {
+                first = nums1[i];
+                second = nums2[other[i]];
+                index = i;
+            }
+        }
+        //cout &amp;lt;&amp;lt; first &amp;lt;&amp;lt; &quot; ; &quot; &amp;lt;&amp;lt; second &amp;lt;&amp;lt; endl;
+        pair&amp;lt;int, int&amp;gt; tmp(first, second);
+        result.push_back(tmp);
+        other[index] += 1;
+        count += 1;
+        // Update min if nums1[min] has matched with all the elements of nums2
+        if (other[min] == n2) {
+            min += 1;
+        }
+    }
+    delete [] other;
+    return result;
+}</summary></entry><entry><title type="html">What I’ve Learned After My Interview at Facebook</title><link href="http://localhost:4000/interviews/2016/03/30/facebook-interview.html" rel="alternate" type="text/html" title="What I've Learned After My Interview at Facebook" /><published>2016-03-30T23:41:19-04:00</published><updated>2016-03-30T23:41:19-04:00</updated><id>http://localhost:4000/interviews/2016/03/30/facebook-interview</id><content type="html" xml:base="http://localhost:4000/interviews/2016/03/30/facebook-interview.html">&lt;p&gt;Near the end of spring break of my sophomore year in college, I flew to California to be interviewed onsite for Facebook University for Analytics 2016. As a freshman I was rejected first round when applying for Facebook University for Engineering, so it was quite an excitement to actually make it to Facebook headquarters this year, even if it was only an interview trip and not an offer. I learned a lot, but this post will only contain the highlights.&lt;/p&gt;
 
 &lt;p&gt;Long story short: I didn’t get the job. But best thing: being physically inside the walls of Facebook and talking to the people behind it (very, very inspiring). Second best thing: I had a shot at putting my foot through the door, and met my peers from other colleges who had the same opportunity as me there. Third best thing: I didn’t have to pay for it.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2016-03-30.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000\assets\images\20160330facebook.JPG&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As unhappy (for me) as I was for the last few hours since the decision email arrived, here are the three main pieces of wisdom I have learned from this experience:&lt;/p&gt;
 

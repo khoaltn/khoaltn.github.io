@@ -5,14 +5,15 @@ date:   2016-07-22 22:41:19 -0500
 categories: Leetcode
 ---
 
-*Problem source: [Find k Pairs with Smallest Sums][https://leetcode.com/problems/find-k-pairs-with-smallest-sums/]*
+###### Problem source: <https://leetcode.com/problems/find-k-pairs-with-smallest-sums/> *
+ 
  
 #### Problem Statement:
 You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k. 
 Define a pair (u,v) which consists of one element from the first array and one element from the second array.
-Find the k pairs (u1,v1),(u2,v2) ...(u_k,v_k) with the smallest sums.
+Find the k pairs (u1,v1),(u2,v2) ...(u~k~, v~k~) with the smallest sums.
  
-##### Example:
+*Example*:
 Given nums1 = [1,7,11], nums2 = [2,4,6], k = 3
 Return: [1,2],[1,4],[1,6]
  
@@ -23,31 +24,31 @@ We know from mathematics that there will be n1 * n2 possible pairs where n1, n2 
 Here is the complete code in C++ with detailed comments and explanations:
  
 {% highlight c++ %}
-vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
+vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, 
+                                      int k) {
     vector<pair<int, int>> result;
     int n1 = nums1.size(), n2 = nums2.size();
     if (n1 == 0 || n2 == 0) return result;
     //sort(nums1.begin(), nums1.end());  //the lists are already sorted
-    //sort(nums2.begin(), nums2.end());
-            
-    int count = 0;
- 
-    // this array tracks the index of the next element in nums2 to match with each element in nums1
+	//sort(nums2.begin(), nums2.end());
+	int count = 0;
+    /* this array tracks the index of the next element in nums2
+	to match with each element in nums1 */
     int* other = new int[n1];          
     memset(other, 0, sizeof(int) * n1);  // set all indices in other[] to 0
- 
-    // min is the index of the current smallest element in nums1 that hasn't finished matching with all elements in nums2.
+    /* min is the index of the current smallest element in nums1 
+	that hasn't finished matching with all elements in nums2. */
     int min = 0, first, second, index;
-    
-    // 2 cases when the loop stops: (1) we find all k pairs; or
-    //                  (2) we find every possible pair that can be made from nums1 and nums2.
+    /* 2 cases when the loop stops: (1) we find all k pairs; or
+      (2) we find every possible pair that can be made from nums1 and nums2. */
     while (count < k && count < n1 * n2) {
-        // first, second form the next smallest pair. index contains the index of first in nums1
+        /* first, second form the next smallest pair. 
+		index contains the index of first in nums1 */
         first = nums1[min];
         second = nums2[other[min]];
         index = min;
-    
-        // this loop finds all the possible candidates to be the next smallest pair and compares them to the current one
+        /* this loop finds all the possible candidates to be the next 
+		smallest pair and compares them to the current one */
         for (int i = min + 1; i < n1; i++) {
             if (nums1[i] + nums2[other[i]] < first + second) {
                 first = nums1[i];
@@ -55,20 +56,17 @@ vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, in
                 index = i;
             }
         }
-   
         //cout << first << " ; " << second << endl;
         pair<int, int> tmp(first, second);
         result.push_back(tmp);
         other[index] += 1;
         count += 1;
-    
         // Update min if nums1[min] has matched with all the elements of nums2
         if (other[min] == n2) {
             min += 1;
         }
     }
-    
-    delete [] other;        
+    delete [] other;
     return result;
 }
 {% endhighlight %}
