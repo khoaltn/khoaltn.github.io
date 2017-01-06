@@ -9,7 +9,7 @@ Near the end of spring break of my sophomore year in college, I flew to Californ
  
 Long story short: I didn't get the job. But best thing: being physically inside the walls of Facebook and talking to the people behind it (very, very inspiring). Second best thing: I had a shot at putting my foot through the door, and met my peers from other colleges who had the same opportunity as me there. Third best thing: I didn't have to pay for it. 
 
-![]({{ site.url }}\assets\images\2016-03-30.JPG)
+![Some Facebook souvenirs]({{ site.url }}\assets\images\2016-03-30.JPG)
 
 As unhappy (for me) as I was for the last few hours since the decision email arrived, here are the three main pieces of wisdom I have learned from this experience:
  
