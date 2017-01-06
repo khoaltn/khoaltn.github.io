@@ -5,16 +5,16 @@ date:   2016-07-22 22:41:19 -0500
 categories: Leetcode
 ---
 
-###### Problem source: <https://leetcode.com/problems/find-k-pairs-with-smallest-sums/> *
+###### Problem source: <https://leetcode.com/problems/find-k-pairs-with-smallest-sums/> 
  
  
 #### Problem Statement:
 You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k. 
 Define a pair (u,v) which consists of one element from the first array and one element from the second array.
-Find the k pairs (u1,v1),(u2,v2) ...(u~k~, v~k~) with the smallest sums.
+Find the k pairs (u1,v1),(u2,v2) ...(u<sub>k</sub>, v<sub>k</sub>) with the smallest sums.
  
 *Example*:
-Given nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+Given nums1 = [1,7,11], nums2 = [2,4,6], k = 3.
 Return: [1,2],[1,4],[1,6]
  
  
