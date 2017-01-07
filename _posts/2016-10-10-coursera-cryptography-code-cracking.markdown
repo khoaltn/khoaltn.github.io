@@ -68,6 +68,8 @@ main(){
 }
 {% endhighlight %}
 
+#### My Solution:
+
 This problem gave me unusual excitement, because quite honestly I really enjoy cracking codes. It's like you're in a detective movie :)
  
 After reading the encryption code (it basically XORed each character of the key with the corresponding character of the plaintexts), I decided to look over the ciphertexts to see if there was any pattern a human could recognize. It was pretty easy to see that the last character of 6 out of 7 ciphertexts was all `0x1E` except for (4) with `0x0F`. Because they were all grammatically correct English sentences, I guessed that `0x1E` stood for the period (.) and `0x0F` stood for the question mark (?). And so I broke the last byte of the key, which was `0x30`.
