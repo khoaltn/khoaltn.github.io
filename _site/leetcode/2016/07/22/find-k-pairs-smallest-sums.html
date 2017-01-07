@@ -69,16 +69,16 @@
     <h6 id="problem-source-httpsleetcodecomproblemsfind-k-pairs-with-smallest-sums">Problem source: <a href="https://leetcode.com/problems/find-k-pairs-with-smallest-sums/">https://leetcode.com/problems/find-k-pairs-with-smallest-sums/</a></h6>
 
 <h4 id="problem-statement">Problem Statement:</h4>
-<p>You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k. 
-Define a pair (u,v) which consists of one element from the first array and one element from the second array.
-Find the k pairs (u1,v1),(u2,v2) …(u<sub>k</sub>, v<sub>k</sub>) with the smallest sums.</p>
+<p>You are given two integer arrays <code class="highlighter-rouge">nums1</code> and <code class="highlighter-rouge">nums2</code> sorted in ascending order and an integer <code class="highlighter-rouge">k</code>. 
+Define a pair <em>(u,v)</em> which consists of one element from the first array and one element from the second array.
+Find the <code class="highlighter-rouge">k</code> pairs <em>(u<sub>1</sub>,v<sub>1</sub>),(u<sub>2</sub>,v<sub>2</sub>) …(u<sub>k</sub>, v<sub>k</sub>)</em> with the smallest sums.</p>
 
 <p><em>Example</em>:
-Given nums1 = [1,7,11], nums2 = [2,4,6], k = 3.
-Return: [1,2],[1,4],[1,6]</p>
+Given <code class="highlighter-rouge">nums1 = [1,7,11], nums2 = [2,4,6], k = 3</code>.
+Return: <code class="highlighter-rouge">[1,2],[1,4],[1,6]</code></p>
 
 <h4 id="solution">Solution:</h4>
-<p>We know from mathematics that there will be n1 * n2 possible pairs where n1, n2 are the sizes of nums1 and nums2 respectively. As a human, we will naturally match each element in nums1 to all the elements in nums2 to create a list of all possible pairs, sort them, and then output the k pairs. This surely results in a correct solution, but performs too many unnecessary computations if k &lt; n1*n2. So the idea for a faster solution here is to keep track of how many elements of nums2 we have matched each element of nums1 with, then find the next smallest pair from all possible pairs of (u, v) where u is an element of nums1 and v is its next corresponding element in nums2 until we have found k pairs or exhausted all the possible pairs.</p>
+<p>We know from mathematics that there will be <code class="highlighter-rouge">n1 * n2</code> possible pairs where <code class="highlighter-rouge">n1, n2</code> are the sizes of <code class="highlighter-rouge">nums1</code> and <code class="highlighter-rouge">nums2</code> respectively. As a human, we will naturally match each element in <code class="highlighter-rouge">nums1</code> to all the elements in <code class="highlighter-rouge">nums2</code> to create a list of all possible pairs, sort them, and then output the k pairs. This surely results in a correct solution, but performs too many unnecessary computations if <code class="highlighter-rouge">k &lt; n1 * n2</code>. So the idea for a faster solution here is to keep track of how many elements of <code class="highlighter-rouge">nums2</code> we have matched each element of <code class="highlighter-rouge">nums1</code> with, then find the next smallest pair from all possible pairs of <em>(u, v)</em> where <code class="highlighter-rouge">u</code> is an element of <code class="highlighter-rouge">nums1</code> and <code class="highlighter-rouge">v</code> is its next corresponding element in <code class="highlighter-rouge">nums2</code> until we have found k pairs or exhausted all the possible pairs.</p>
 
 <p>Here is the complete code in C++ with detailed comments and explanations:</p>
 

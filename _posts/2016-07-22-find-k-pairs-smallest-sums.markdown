@@ -10,8 +10,8 @@ categories: Leetcode
  
 #### Problem Statement:
 You are given two integer arrays `nums1` and `nums2` sorted in ascending order and an integer `k`. 
-Define a pair `(u,v)` which consists of one element from the first array and one element from the second array.
-Find the k pairs `(u<sub>1</sub>,v<sub>1</sub>),(u<sub>2</sub>,v<sub>2</sub>) ...(u<sub>k</sub>, v<sub>k</sub>)` with the smallest sums.
+Define a pair *(u,v)* which consists of one element from the first array and one element from the second array.
+Find the `k` pairs *(u<sub>1</sub>,v<sub>1</sub>),(u<sub>2</sub>,v<sub>2</sub>) ...(u<sub>k</sub>, v<sub>k</sub>)* with the smallest sums.
  
 *Example*:
 Given `nums1 = [1,7,11], nums2 = [2,4,6], k = 3`.
@@ -19,7 +19,7 @@ Return: `[1,2],[1,4],[1,6]`
  
  
 #### Solution: 
-We know from mathematics that there will be `n1 * n2` possible pairs where `n1, n2` are the sizes of `nums1` and `nums2` respectively. As a human, we will naturally match each element in `nums1` to all the elements in `nums2` to create a list of all possible pairs, sort them, and then output the k pairs. This surely results in a correct solution, but performs too many unnecessary computations if `k < n1 * n2`. So the idea for a faster solution here is to keep track of how many elements of `nums2` we have matched each element of `nums1` with, then find the next smallest pair from all possible pairs of `(u, v)` where `u` is an element of `nums1` and `v` is its next corresponding element in `nums2` until we have found k pairs or exhausted all the possible pairs.
+We know from mathematics that there will be `n1 * n2` possible pairs where `n1, n2` are the sizes of `nums1` and `nums2` respectively. As a human, we will naturally match each element in `nums1` to all the elements in `nums2` to create a list of all possible pairs, sort them, and then output the k pairs. This surely results in a correct solution, but performs too many unnecessary computations if `k < n1 * n2`. So the idea for a faster solution here is to keep track of how many elements of `nums2` we have matched each element of `nums1` with, then find the next smallest pair from all possible pairs of *(u, v)* where `u` is an element of `nums1` and `v` is its next corresponding element in `nums2` until we have found k pairs or exhausted all the possible pairs.
  
 Here is the complete code in C++ with detailed comments and explanations:
  
