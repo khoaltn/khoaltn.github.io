@@ -6,7 +6,6 @@ categories: Leetcode
 tag: 
 - leetcode
 - algorithms
-- interviews
 headerImage: true
 blog: true
 hidden: false # count this post in blog pagination

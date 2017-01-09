@@ -29,9 +29,9 @@ keywords: "Khoa LT Nguyen, Khoa Nguyen, Khoa, knguyen18, gh-pages, github"
 width: large
 
 # AUTHOR
-author:
-  name: Khoa Nguyen
-  bio: "I'm a tech nerd, and I'm proud of it."
+author: Khoa Nguyen
+  #name: Khoa Nguyen
+  #bio: "I'm a tech nerd, and I'm proud of it."
 
 # SOCIAL
 twitter: nguyen_khoa18
@@ -51,6 +51,7 @@ show-tags: true
 related: true
 show-author: true
 animation: true
+analytics-google: UA-90057261-1
 
 sass:
   sass_dir: _sass

@@ -5,12 +5,12 @@ layout: compress
 <html lang="en">
 <head>
 
-  <meta name="description" content={{ site.description }}>
-  <meta name="keywords" content={{ site.keywords }}>
-  <meta name="author" content={{ site.author.name }}>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="author" content="{{ site.author }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% seo favicon=false author=false %}
+  {% seo %}
   
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
