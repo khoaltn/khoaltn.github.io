@@ -45,6 +45,7 @@ picture: assets/images/profile.png
 projects: false
 about: true
 blog: true
+resume: true
 read-time: true
 show-tags: true
 related: true
