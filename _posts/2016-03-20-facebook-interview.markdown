@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "What I've Learned After My Interview at Facebook"
-date:   2016-03-30 22:41:19 -0500
+date:   2016-03-30 22:41:19 
 categories: Interviews
+tag: 
+- internship
+- interviews
+- facebook
+headerImage: true
+blog: true
+hidden: false # count this post in blog pagination
+author: site.author
 ---
 
 Near the end of spring break of my sophomore year in college, I flew to California to be interviewed onsite for Facebook University for Analytics 2016. As a freshman I was rejected first round when applying for Facebook University for Engineering, so it was quite an excitement to actually make it to Facebook headquarters this year, even if it was only an interview trip and not an offer. I learned a lot, but this post will only contain the highlights.

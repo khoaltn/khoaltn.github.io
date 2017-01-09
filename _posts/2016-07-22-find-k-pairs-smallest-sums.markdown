@@ -3,6 +3,14 @@ layout: post
 title:  "Leetcode #373: Find K Pairs with Smallest Sums"
 date:   2016-07-22 22:41:19 -0500
 categories: Leetcode
+tag: 
+- leetcode
+- algorithms
+- interviews
+headerImage: true
+blog: true
+hidden: false # count this post in blog pagination
+author: site.author
 ---
 
 ###### Problem source: <https://leetcode.com/problems/find-k-pairs-with-smallest-sums/> 

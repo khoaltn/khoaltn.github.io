@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking.html</loc>
-<lastmod>2016-10-10T23:41:19-04:00</lastmod>
+<lastmod>2016-10-10T18:41:19-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/leetcode/2016/07/22/find-k-pairs-smallest-sums.html</loc>
@@ -10,12 +10,18 @@
 </url>
 <url>
 <loc>http://localhost:4000/interviews/2016/03/30/facebook-interview.html</loc>
-<lastmod>2016-03-30T23:41:19-04:00</lastmod>
+<lastmod>2016-03-30T18:41:19-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tags.html</loc>
 </url>
 </urlset>

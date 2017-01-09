@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "Cryptography: Cracking Codes"
-date:   2016-10-10 22:41:19 -0500
+date:   2016-10-10 22:41:19 
 categories: Coursera
+tag: 
+- cryptography
+- coursera
+- cracking
+headerImage: true
+blog: true
+hidden: false # count this post in blog pagination
+author: site.author
 ---
 
 I did the problem below as an optional programming assignment for the course Cryptography on Coursera, offered by the University of Maryland in their Cybersecurity Specialization.
