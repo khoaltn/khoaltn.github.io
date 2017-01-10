@@ -11,6 +11,7 @@ headerImage: true
 blog: true
 hidden: false # count this post in blog pagination
 author: site.author
+description: "A few lessons from my first interview ever with a tech company."
 ---
 
 Near the end of spring break of my sophomore year in college, I flew to California to be interviewed onsite for Facebook University for Analytics 2016. As a freshman I was rejected first round when applying for Facebook University for Engineering, so it was quite an excitement to actually make it to Facebook headquarters this year, even if it was only an interview trip and not an offer. I learned a lot, but this post will only contain the highlights.

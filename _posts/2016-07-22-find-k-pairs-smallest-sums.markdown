@@ -10,6 +10,7 @@ headerImage: true
 blog: true
 hidden: false # count this post in blog pagination
 author: site.author
+description: "My solution to Leetcode's algorithm problem #373 when I prepared for coding interviews."
 ---
 
 ###### Problem source: <https://leetcode.com/problems/find-k-pairs-with-smallest-sums/> 
