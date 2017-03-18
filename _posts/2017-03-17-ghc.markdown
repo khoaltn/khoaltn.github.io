@@ -1,0 +1,35 @@
+---
+layout: post
+title: "One Year Later, or How Grace Hopper Conference Is Totally Worth It"
+date:   2017-03-17 22:41:19 
+categories: Interviews
+tag: 
+- internship
+- interviews
+- GraceHopperConference
+headerImage: true
+blog: true
+hidden: false # count this post in blog pagination
+author: site.author
+description: "My reflection on my past year (March 2016 - March 2017)"
+---
+
+![alt text]({{ site.url }}\assets\images\20170317ghc1.jpg)
+
+A year after my very first interview with a tech company outside my college campus, a lot of things have changed. I've changed. It feels good to make that first interview snowball into a year of asking forerunners for advice, practicing algorithms, finding a hidden obsession (almost) with programming competitions, and embracing myself as a woman in tech.
+
+I let go most of the emotional baggage of past failures. Some I keep for motivational purposes. A quote I read somewhere (probably an answer on Quora) finally stopped me from questioning the college choices I made as a high school senior. It was along the line of, "Don't be proud of the school you go to, do something that makes your school proud."
+
+Late March 2016. I reached out and connected with people in different parts of the world whom I may or may not have known well, but could give me helpful advice. One of my closest friends suggested I applied for Grace Hopper Conference (GHC) after I shared the news of Facebook's rejection with him. Coincidentally, as luck would have it, this happened when the original deadline for GHC scholarship was extended due to some technical difficulties. Within little more than a week before the final deadline, I asked my amazing professor to write me a recommendation letter, wrote my scholarship essay and my poster proposal, and sent the application away in April.
+
+In the meantime, I set a small goal of doing at least 1 problem on LeetCode OJ a week. I got frustrated with myself for being slow at first, but as time went on, I didn't have to look up language reference as much, I solved some hard-level problems myself, and stuff from my Algorithm Analysis course came back to me. I knew I had one last shot at a software engineering internship as an undergraduate for the summer after my junior year, and I was determined to make it count.
+
+The GHC scholarship acceptance email came in June. The GHC resume database got online shortly after, and I immediately sent mine in. Emails from recruiters started to arrive. In late August, a Google recruiter contacted me. She was one of the nicest, most helpful, and prompt people I've ever worked with. Google became my first coding interview experience in late September with 2 back-to-back phone/Google Docs interviews. I had my 3rd one with them in late October and got to the host matching stage, but at that point I had another pressing deadline and couldn't wait out the host-matching timeline :(
+
+In October, being at GHC in Houston, Texas was surreal. Not wanting to waste any second at GHC, I woke up at 6am everyday, took the first bus from the hotel to the conference site, and scheduled my 3 days out in advance, filling it with as many workshops/talks/interviews/sponsored events as I could from 8am to 8-9pm. My first Software Engineer internship offer came from Intuit. My most memorable interview experience came from Pure Storage. That interview was supposed to be an hour long. It actually lasted an hour and 40 minutes. 20 minutes in, I already ran out of knowledge from the Intro to Operating Systems course I was taking at the time, but I tried my best to catch up with what my interviewer was saying about multithreaded programming, and applied it to the problem in front of me that kept being added more and more conditions to. I learned more during that interview than any other. After GHC, they told me I was in for the next round of interviews, but I had to decline because I already accepted Intuit's offer, and didn't want to waste their resources, but they left quite an impression on me for sure! Also, I got to make a tech joke with my poster slot:
+
+![alt text]({{ site.url }}\assets\images\20170317ghc2.jpg)
+
+A week after I got back from GHC, it was the ACM Regional. My team solved 2 problems out of 10, just like the team last year, and the year before. I got the competitive programming bug ever since. We went again to Denison Spring Programming Contest 2017 in February where we ranked 7th out of 22 teams total, but we could have ranked 3rd or 4th if I hadn't missed 2 lines in my code in the last 15 minutes of the competition that would have made another successful submission. I'm out for blood this coming ACM Regional, not exactly to reach the World Finals, but at least to break the 2-problem-per-year curse that my college seems to be stuck with. I really look forward to Google Code Jam this April for the same rush of both frustration and instant gratification. Why I choose to go on such emotional roller coaster rides, I don't know entirely, but it's fun!
+
+Now, I look forward to the future. Just gotta finish my senior thesis first :) After GHC, I'm more aware of my status as a woman in tech than ever. We've all seen stories about the current situation in the tech industry regarding diversity, but I always have hopes, maybe a little more than allowed, in everything :)
