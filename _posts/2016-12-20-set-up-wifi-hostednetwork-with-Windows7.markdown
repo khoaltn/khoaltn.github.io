@@ -31,7 +31,7 @@ A few years ago I visited a home where there was only a Dell desktop with Window
 * Remote Procedure Call (RPC)
 * Telephony 
 
-After the little hack above, we are ready to follow the official instructions posted on Dell's website at http://www.dell.com/support/article/us/en/04/SLN208643/EN. The entire content of this article is reproduced here for your convenience. 
+After the little hack above, we are ready to follow the official instructions posted on Dell's website at <http://www.dell.com/support/article/us/en/04/SLN208643/EN>. The entire content of this article is reproduced here for your convenience. 
 
 4. The adapter for the connection is Microsoft Virtual WiFi Miniport Adapter. If there is problem setting this up, go to Start -> search for Device Manager -> Network -> reinstall driver for this adapter.
 
