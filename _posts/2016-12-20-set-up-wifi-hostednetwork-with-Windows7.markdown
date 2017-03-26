@@ -38,22 +38,18 @@ After the little hack above, we are ready to follow the official instructions po
 5. Hit the Start button, and type "Command Prompt" or "cmd" on the search box. If your computer is based on Windows 8, you'll need to press the keyboard's Windows logo key to switch to the system's Modern UI Style and type "Command Prompt" or "cmd." Run Command Prompt with admin rights. To do that, right-click on the Command Prompt icon and select "Run as administrator."
 
 6. Type "netsh wlan show drivers" (without the quotation marks) in Command Prompt to check whether or not your computer supports a hosted network. The "Hosted network supported" field should indicate "Yes" if your unit supports WiFi sharing. If it says "No," you'll have to download the corresponding driver for your WiFi adapter first before proceeding.
-
 ![alt text]({{ site.url }}\assets\images\20161220wifiWin1.jpg)
 
 7. To create a hotspot, type "netsh wlan set hostednetwork mode=allow ssid=yournetworkname key=yournetworkpassword," and hit Enter on your keyboard.
 Remember, "ssid" refers to the WiFi hotspot's name while "key" is said network's password. You can also use the aforementioned command to change the hotspot's name and password.
-
 ![alt text]({{ site.url }}\assets\images\20161220wifiWin2.jpg)
 
 8. To get the hotspot up and running, type "netsh wlan start hostednetwork." Make sure your computer's WiFi adapter is also switched on, or the hotspot won't work at all.
-
 ![alt text]({{ site.url }}\assets\images\20161220wifiWin3.jpg)
 
 9. Again, hit the Start button. Type "Network and Sharing Center," and left-click on it. If you're using a Windows-based unit, you probably know what to do by now. (Switch to Modern UI Style, and type "Network and Sharing Center.")
 
 10. Select "Change adapter settings," which can be found on the left-hand side of the window. Both the network connection you want to share and your newly created WiFi hotspot are shown here. Choose the network connection you wish to share. Right click on it, select "Properties," and go to the "Sharing" tab. Check the option "Allow other network users to connect through this computer's Internet connection." This time, select the WiFi hotspot you created earlier.
-
 ![alt text]({{ site.url }}\assets\images\20161220wifiWin4.jpg)
 
 11. To turn off your hotspot, type "netsh wlan stop hostednetwork" in Command Prompt. 
