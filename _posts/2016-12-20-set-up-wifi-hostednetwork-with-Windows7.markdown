@@ -6,6 +6,7 @@ categories: "Computer Networking"
 tag: 
 - computer networking
 - windows7
+- WiFi
 headerImage: true
 blog: true
 hidden: false # count this post in blog pagination
