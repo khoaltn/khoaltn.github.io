@@ -20,18 +20,16 @@ Artificial intelligence (AI) has been on a steady rise for the last 20 years, in
 ### Introduction to Artificial Intelligence (AI)
 The idea of a "thinking" machine has been around for more than half a century, as long as the existence of computers itself, starting with Alan Turing proposing the Turing Test in the 1950s. A machine would pass the Turing Test if it can fool humans into thinking the machine is also a human [^1]. The interest in machine learning (ML) and artificial intelligence (AI) was restrained by the limited computing power of the time, but has become stronger and stronger as technology develops into what we have today. Now, chatbots are regularly deployed in Facebook Messenger and Slack chat groups, ML algorithms choose what ads you should see on a website, and the AIs of tech companies are beating human champions at poker and Go, two of the most difficult strategy games even for humans to master. People are worried that ultimately, automatons would replace all humans at what we used to be the best at. And yet, AIs are still not at the same level as humans on understanding nuanced speech, sarcasm, or body language, for example. Sometimes, the line between "easy" and "difficult" can be blurry. 
 
-{% include image.html
-            img="\assets\images\20170503EasyVsDifficult.png"
-			title="easyVSdifficult"
-            caption="(Photo credit: xkcd.com) Well, for a computer, knowing the national park where the photo is taken is easier than knowing that there is a bird in it. On the other hand, any normally developed 4-year-old toddler can tell you that's a bird, but they might have no idea what national park it's in." 
-			style = "width:267px; height:448px; float:left; padding-right:50px;"%}
+![]({{ site.url }}\assets\images\20170503EasyVsDifficult.png)
+
+(Photo credit: xkcd.com) Well, for a computer, knowing the national park where the photo is taken is easier than knowing that there is a bird in it. On the other hand, any normally developed 4-year-old toddler can tell you that's a bird, but they might have no idea what national park it's in.
 
 ### The Love Story of Neuroscience and Artificial Intelligence
 Researchers thought of modeling a "smart" machine after the human brain surprisingly early in 1957, when Frank Rosenblatt designed the perceptron after the neurons, and created the first neural network [^1]. A perceptron is binary, meaning it takes the value 1 if a certain condition is met, and 0 otherwise [^2]. It is similar to the way a neuron only fires an action potential when it reaches a certain threshold. An action potential is one of the ways neurons communicate with each other, and that is also how perceptrons in a network connect with each other to learn a certain concept. It did not take long for researchers to realize that a network of perceptrons were not capable of many things, which now makes sense when we compare it with the complex, definitely non-binary functionality of neurons. They need better networks of units, appropriately named "neural networks" and "neurons" respectively, in order for the machines to get smarter.
 
 The perceptron signals the start of computer science research looking at nature, especially the mammal brain, for inspirations, although much of the theory and implementation rely on mathematical and computer science knowledge. More algorithms are created, notably recurrent neural networks and deep learning networks. Comparing these networks (left) with the drawings of human hippocampus stained with Golgi's method (right) below, can you see the similarities? (Photo credit: Wikipedia and Wikimedia Commons)
 
-![]({{ site.url }}\assets\images\20170503nn.png)        ![]({{ site.url }}\assets\images\20170503golgi.jpg)
+![]({{ site.url }}\assets\images\20170503nn.png) ![]({{ site.url }}\assets\images\20170503golgi.jpg)
 
 ### The Classification Problem, Or, Teaching A Toddler How To Recognize Objects
 
