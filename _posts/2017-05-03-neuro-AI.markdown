@@ -1,0 +1,72 @@
+---
+layout: post
+title: "The Neuroscience of Artificial Intelligence"
+date:   2017-05-03 15:41:19 
+categories: Misc
+tag: 
+- Artificial Intelligence (AI)
+- Neuroscience
+headerImage: true
+blog: true
+hidden: false # count this post in blog pagination
+author: site.author
+description: "An article written in the format of a Core Concept article for Frontiers for Young Minds. Assignment for NEUR-200 Introduction to Neuroscience"
+---
+
+### Abstract
+Artificial intelligence (AI) has been on a steady rise for the last 20 years, inspired by the improved understanding of the brain and implemented with mathematics. It has achieved several feats, including driving cars, beating humans at Go and poker, and even creating art works and music. Yet there are still limitations to what AI can do, such as detecting sarcasm or recognizing features in low-resolution images, which may be explain in part by limited computing power and our lack of a total understanding of the human brain. This article explores the history and connection between the state of AI and what we currently know about the human brain, and compares the learning process in humans and AI alike.
+
+
+### Introduction to Artificial Intelligence (AI)
+The idea of a "thinking" machine has been around for more than half a century, as long as the existence of computers itself, starting with Alan Turing proposing the Turing Test in the 1950s. A machine would pass the Turing Test if it can fool humans into thinking the machine is also a human [^1]. The interest in machine learning (ML) and artificial intelligence (AI) was restrained by the limited computing power of the time, but has become stronger and stronger as technology develops into what we have today. Now, chatbots are regularly deployed in Facebook Messenger and Slack chat groups, ML algorithms choose what ads you should see on a website, and the AIs of tech companies are beating human champions at poker and Go, two of the most difficult strategy games even for humans to master. People are worried that ultimately, automatons would replace all humans at what we used to be the best at. And yet, AIs are still not at the same level as humans on understanding nuanced speech, sarcasm, or body language, for example. Sometimes, the line between "easy" and "difficult" can be blurry. 
+
+{% include image.html
+            img="\assets\images\20170503EasyVsDifficult.png"
+			title="easyVSdifficult"
+            caption="(Photo credit: xkcd.com) Well, for a computer, knowing the national park where the photo is taken is easier than knowing that there is a bird in it. On the other hand, any normally developed 4-year-old toddler can tell you that's a bird, but they might have no idea what national park it's in." 
+			style = "width:267px; height:448px; float:left; padding-right:50px;"%}
+
+### The Love Story of Neuroscience and Artificial Intelligence
+Researchers thought of modeling a "smart" machine after the human brain surprisingly early in 1957, when Frank Rosenblatt designed the perceptron after the neurons, and created the first neural network [^1]. A perceptron is binary, meaning it takes the value 1 if a certain condition is met, and 0 otherwise [^2]. It is similar to the way a neuron only fires an action potential when it reaches a certain threshold. An action potential is one of the ways neurons communicate with each other, and that is also how perceptrons in a network connect with each other to learn a certain concept. It did not take long for researchers to realize that a network of perceptrons were not capable of many things, which now makes sense when we compare it with the complex, definitely non-binary functionality of neurons. They need better networks of units, appropriately named "neural networks" and "neurons" respectively, in order for the machines to get smarter.
+
+The perceptron signals the start of computer science research looking at nature, especially the mammal brain, for inspirations, although much of the theory and implementation rely on mathematical and computer science knowledge. More algorithms are created, notably recurrent neural networks and deep learning networks. Comparing these networks (left) with the drawings of human hippocampus stained with Golgi's method (right) below, can you see the similarities? (Photo credit: Wikipedia and Wikimedia Commons)
+
+![]({{ site.url }}\assets\images\20170503nn.png)        ![]({{ site.url }}\assets\images\20170503golgi.jpg)
+
+### The Classification Problem, Or, Teaching A Toddler How To Recognize Objects
+
+Perhaps you remember all those years you've spent as a toddler learning how to recognize the different shapes, animals, things, or parts of your body by your caregivers telling you what is what and answering all of your silly questions. Perhaps not, but you might have seen somebody else's child going through the same phase. The child looks at the object and her brain takes in its image. Then she points to it and asks you, "What's that?" And you answer, "Honey it's a cat." Enough times of the child asking and you answering, and the child's brain registers in some cluster of neurons that this thing is identified as a "cat". 
+
+The same process applies to training a neural network. You feed the computer not one, but many, many images of cats taken from different angles, in different settings, of different breeds, so that it can extract features of cats from these pictures, and calibrate the weights on the connections of its neurons to respond to those features. Eventually, at some point after a lot of pictures, it should be able to reliably tell if it's looking at a cat or not. Sometimes it can be wrong, but hey, humans do that sometimes too. Incidentally, differentiating between cats and dogs was a classic classification problem for AI researchers in the 1980s and 1990s [^3]. Now, advances in AI give us something like <https://quickdraw.withgoogle.com> or <https://www.autodraw.com>. You can click on the links to contribute your doodles to training a super-toddler AI created by Google in solving the very classic problem of classification!
+
+### Limits of AI
+
+Nature has spent million of years on evolution to reach the wonder that is the human brain. Technology has just begun little more than 50 years ago, barely scratching the surface of what our brain is capable of. No AI has yet the ability to process such an enormous amount of sensory input and combine this data in unique ways every second during the decades of a human lifespan without overheating. Tugui [^5] successfully summarizes the limitations of AI into the following points:
+
+1. Nature follows the law of entropy to reach stabilization in any system. AI does not (but it needs to).
+
+2. The foundations of AI is based on procedures that may restrict the successful mimicking of actual neural activity.
+
+3. AI is founded upon computer science, and computer science is founded upon 0 and 1 (or True and False). Nature is very non-binary.
+
+4. AI uses symbolic logic based on True/False, while natural intelligence (i.e. human's intelligence) is much more fluid.
+
+Our job is to increase the currently limited flow of knowledge between neuroscience and AI research, because even though the two fields would help each other tremendously, current advances in AI and neuroscience are often disconnected [^4]. Understanding the human brain, and the relationship between neuroscience and artificial intelligence, is the key to help the currently toddler-AI grow into an adult one. 
+
+
+### References
+
+[^1]: Marr, Bernard. "A Short History of Machine Learning." Forbes. Forbes Magazine, 08 Mar. 2016. Web. 03 May 2017. <https://www.forbes.com/sites/bernardmarr/2016/02/19/a-short-history-of-machine-learning-every-manager-should-read/#1e7cdec15e78>.
+
+[^2]: Mitchell, Tom M. 1. Machine Learning. McGraw-Hill, New York, 1997.
+
+[^3]: Lewis-kraus, Gideon. "The Great A.I. Awakening." The New York Times. The New York Times, 14 Dec. 2016. Web. 04 May 2017. <https://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html>.
+
+
+[^4]: Potter, Steve M. "What Can AI Get from Neuroscience?"  Lecture Notes in Computer Science (including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Vol. 4850. 2007. 174-85. Web. 2 Feb. 2017.
+
+[^5]: Tugui, Alexandru. 2004. "Reflections on the Limits of Artificial Intelligence".  Ubiquity 2004, December (December 2004), 2-2. DOI=http://dx.doi.org/10.1145/1041062.1041064
+
+
+
+

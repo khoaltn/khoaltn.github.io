@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-17T23:21:19-04:00</updated><id>http://localhost:4000//</id><title type="html">Khoa Nguyen</title><subtitle>My personal website for everything tech-related.</subtitle><author><name>Khoa Nguyen</name></author><entry><title type="html">One Year Later, or How Grace Hopper Conference Is Totally Worth It</title><link href="http://localhost:4000/interviews/2017/03/17/ghc.html" rel="alternate" type="text/html" title="One Year Later, or How Grace Hopper Conference Is Totally Worth It" /><published>2017-03-17T18:41:19-04:00</published><updated>2017-03-17T18:41:19-04:00</updated><id>http://localhost:4000/interviews/2017/03/17/ghc</id><content type="html" xml:base="http://localhost:4000/interviews/2017/03/17/ghc.html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000\assets\images\20170317ghc1.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-04T01:32:59-04:00</updated><id>http://localhost:4000//</id><title type="html">Khoa Nguyen</title><subtitle>My personal website for everything tech-related.</subtitle><author><name>Khoa Nguyen</name></author><entry><title type="html">The Neuroscience of Artificial Intelligence</title><link href="http://localhost:4000/misc/2017/05/03/neuro-AI.html" rel="alternate" type="text/html" title="The Neuroscience of Artificial Intelligence" /><published>2017-05-03T11:41:19-04:00</published><updated>2017-05-03T11:41:19-04:00</updated><id>http://localhost:4000/misc/2017/05/03/neuro-AI</id><content type="html" xml:base="http://localhost:4000/misc/2017/05/03/neuro-AI.html">&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+&lt;p&gt;Artificial intelligence (AI) has been on a steady rise for the last 20 years, inspired by the improved understanding of the brain and implemented with mathematics. It has achieved several feats, including driving cars, beating humans at Go and poker, and even creating art works and music. Yet there are still limitations to what AI can do, such as detecting sarcasm or recognizing features in low-resolution images, which may be explain in part by limited computing power and our lack of a total understanding of the human brain. This article explores the history and connection between the state of AI and what we currently know about the human brain, and compares the learning process in humans and AI alike.&lt;/p&gt;
+
+&lt;h3 id=&quot;introduction-to-artificial-intelligence-ai&quot;&gt;Introduction to Artificial Intelligence (AI)&lt;/h3&gt;
+&lt;p&gt;The idea of a “thinking” machine has been around for more than half a century, as long as the existence of computers itself, starting with Alan Turing proposing the Turing Test in the 1950s. A machine would pass the Turing Test if it can fool humans into thinking the machine is also a human &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The interest in machine learning (ML) and artificial intelligence (AI) was restrained by the limited computing power of the time, but has become stronger and stronger as technology develops into what we have today. Now, chatbots are regularly deployed in Facebook Messenger and Slack chat groups, ML algorithms choose what ads you should see on a website, and the AIs of tech companies are beating human champions at poker and Go, two of the most difficult strategy games even for humans to master. People are worried that ultimately, automatons would replace all humans at what we used to be the best at. And yet, AIs are still not at the same level as humans on understanding nuanced speech, sarcasm, or body language, for example. Sometimes, the line between “easy” and “difficult” can be blurry.&lt;/p&gt;
+
+&lt;!-- _includes/image.html --&gt;
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    
+
+    &lt;img src=&quot;http://localhost:4000\\assets\images\20170503EasyVsDifficult.png&quot; alt=&quot;easyVSdifficult&quot; style=&quot;width:267px; height:448px; float:left; padding-right:50px;&quot; /&gt;
+
+    
+    
+        &lt;p class=&quot;image-caption&quot;&gt;(Photo credit: xkcd.com) Well, for a computer, knowing the national park where the photo is taken is easier than knowing that there is a bird in it. On the other hand, any normally developed 4-year-old toddler can tell you that's a bird, but they might have no idea what national park it's in.&lt;/p&gt;
+    
+
+
+&lt;/div&gt;
+
+&lt;h3 id=&quot;the-love-story-of-neuroscience-and-artificial-intelligence&quot;&gt;The Love Story of Neuroscience and Artificial Intelligence&lt;/h3&gt;
+&lt;p&gt;Researchers thought of modeling a “smart” machine after the human brain surprisingly early in 1957, when Frank Rosenblatt designed the perceptron after the neurons, and created the first neural network &lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. A perceptron is binary, meaning it takes the value 1 if a certain condition is met, and 0 otherwise &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. It is similar to the way a neuron only fires an action potential when it reaches a certain threshold. An action potential is one of the ways neurons communicate with each other, and that is also how perceptrons in a network connect with each other to learn a certain concept. It did not take long for researchers to realize that a network of perceptrons were not capable of many things, which now makes sense when we compare it with the complex, definitely non-binary functionality of neurons. They need better networks of units, appropriately named “neural networks” and “neurons” respectively, in order for the machines to get smarter.&lt;/p&gt;
+
+&lt;p&gt;The perceptron signals the start of computer science research looking at nature, especially the mammal brain, for inspirations, although much of the theory and implementation rely on mathematical and computer science knowledge. More algorithms are created, notably recurrent neural networks and deep learning networks. Comparing these networks (left) with the drawings of human hippocampus stained with Golgi’s method (right) below, can you see the similarities? (Photo credit: Wikipedia and Wikimedia Commons)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000\assets\images\20170503nn.png&quot; alt=&quot;&quot; /&gt;        &lt;img src=&quot;http://localhost:4000\assets\images\20170503golgi.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-classification-problem-or-teaching-a-toddler-how-to-recognize-objects&quot;&gt;The Classification Problem, Or, Teaching A Toddler How To Recognize Objects&lt;/h3&gt;
+
+&lt;p&gt;Perhaps you remember all those years you’ve spent as a toddler learning how to recognize the different shapes, animals, things, or parts of your body by your caregivers telling you what is what and answering all of your silly questions. Perhaps not, but you might have seen somebody else’s child going through the same phase. The child looks at the object and her brain takes in its image. Then she points to it and asks you, “What’s that?” And you answer, “Honey it’s a cat.” Enough times of the child asking and you answering, and the child’s brain registers in some cluster of neurons that this thing is identified as a “cat”.&lt;/p&gt;
+
+&lt;p&gt;The same process applies to training a neural network. You feed the computer not one, but many, many images of cats taken from different angles, in different settings, of different breeds, so that it can extract features of cats from these pictures, and calibrate the weights on the connections of its neurons to respond to those features. Eventually, at some point after a lot of pictures, it should be able to reliably tell if it’s looking at a cat or not. Sometimes it can be wrong, but hey, humans do that sometimes too. Incidentally, differentiating between cats and dogs was a classic classification problem for AI researchers in the 1980s and 1990s &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Now, advances in AI give us something like &lt;a href=&quot;https://quickdraw.withgoogle.com&quot;&gt;https://quickdraw.withgoogle.com&lt;/a&gt; or &lt;a href=&quot;https://www.autodraw.com&quot;&gt;https://www.autodraw.com&lt;/a&gt;. You can click on the links to contribute your doodles to training a super-toddler AI created by Google in solving the very classic problem of classification!&lt;/p&gt;
+
+&lt;h3 id=&quot;limits-of-ai&quot;&gt;Limits of AI&lt;/h3&gt;
+
+&lt;p&gt;Nature has spent million of years on evolution to reach the wonder that is the human brain. Technology has just begun little more than 50 years ago, barely scratching the surface of what our brain is capable of. No AI has yet the ability to process such an enormous amount of sensory input and combine this data in unique ways every second during the decades of a human lifespan without overheating. Tugui &lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; successfully summarizes the limitations of AI into the following points:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nature follows the law of entropy to reach stabilization in any system. AI does not (but it needs to).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The foundations of AI is based on procedures that may restrict the successful mimicking of actual neural activity.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;AI is founded upon computer science, and computer science is founded upon 0 and 1 (or True and False). Nature is very non-binary.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;AI uses symbolic logic based on True/False, while natural intelligence (i.e. human’s intelligence) is much more fluid.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Our job is to increase the currently limited flow of knowledge between neuroscience and AI research, because even though the two fields would help each other tremendously, current advances in AI and neuroscience are often disconnected &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. Understanding the human brain, and the relationship between neuroscience and artificial intelligence, is the key to help the currently toddler-AI grow into an adult one.&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Marr, Bernard. “A Short History of Machine Learning.” Forbes. Forbes Magazine, 08 Mar. 2016. Web. 03 May 2017. &lt;a href=&quot;https://www.forbes.com/sites/bernardmarr/2016/02/19/a-short-history-of-machine-learning-every-manager-should-read/#1e7cdec15e78&quot;&gt;https://www.forbes.com/sites/bernardmarr/2016/02/19/a-short-history-of-machine-learning-every-manager-should-read/#1e7cdec15e78&lt;/a&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Mitchell, Tom M. 1. Machine Learning. McGraw-Hill, New York, 1997. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Lewis-kraus, Gideon. “The Great A.I. Awakening.” The New York Times. The New York Times, 14 Dec. 2016. Web. 04 May 2017. &lt;a href=&quot;https://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html&quot;&gt;https://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;Tugui, Alexandru. 2004. “Reflections on the Limits of Artificial Intelligence”.  Ubiquity 2004, December (December 2004), 2-2. DOI=http://dx.doi.org/10.1145/1041062.1041064 &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Potter, Steve M. “What Can AI Get from Neuroscience?”  Lecture Notes in Computer Science (including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Vol. 4850. 2007. 174-85. Web. 2 Feb. 2017. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>site.author</name></author><category term="Artificial Intelligence (AI)" /><category term="Neuroscience" /><summary type="html">Abstract
+Artificial intelligence (AI) has been on a steady rise for the last 20 years, inspired by the improved understanding of the brain and implemented with mathematics. It has achieved several feats, including driving cars, beating humans at Go and poker, and even creating art works and music. Yet there are still limitations to what AI can do, such as detecting sarcasm or recognizing features in low-resolution images, which may be explain in part by limited computing power and our lack of a total understanding of the human brain. This article explores the history and connection between the state of AI and what we currently know about the human brain, and compares the learning process in humans and AI alike.</summary></entry><entry><title type="html">One Year Later, or How Grace Hopper Conference Is Totally Worth It</title><link href="http://localhost:4000/interviews/2017/03/17/ghc.html" rel="alternate" type="text/html" title="One Year Later, or How Grace Hopper Conference Is Totally Worth It" /><published>2017-03-17T18:41:19-04:00</published><updated>2017-03-17T18:41:19-04:00</updated><id>http://localhost:4000/interviews/2017/03/17/ghc</id><content type="html" xml:base="http://localhost:4000/interviews/2017/03/17/ghc.html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000\assets\images\20170317ghc1.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A year after my very first interview with a tech company outside my college campus, a lot of things have changed. I’ve changed. It feels good to make that first interview snowball into a year of asking forerunners for advice, practicing algorithms, finding a hidden obsession (almost) with programming competitions, and embracing myself as a woman in tech.&lt;/p&gt;
 
@@ -16,7 +91,66 @@
 
 &lt;p&gt;A week after I got back from GHC, it was the ACM Regional. My team solved 2 problems out of 10, just like the team last year, and the year before. I got the competitive programming bug ever since. We went again to Denison Spring Programming Contest 2017 in February where we ranked 7th out of 22 teams total, but we could have ranked 3rd or 4th if I hadn’t missed 2 lines in my code in the last 15 minutes of the competition that would have made another successful submission. I’m out for blood this coming ACM Regional, not exactly to reach the World Finals, but at least to break the 2-problem-per-year curse that my college seems to be stuck with. I really look forward to Google Code Jam this April for the same rush of both frustration and instant gratification. Why I choose to go on such emotional roller coaster rides, I don’t know entirely, but it’s fun!&lt;/p&gt;
 
-&lt;p&gt;Now, I look forward to the future. Just gotta finish my senior thesis first :) After GHC, I’m more aware of my status as a woman in tech than ever. We’ve all seen stories about the current situation in the tech industry regarding diversity, but I always have hopes, maybe a little more than allowed, in everything :)&lt;/p&gt;</content><author><name>site.author</name></author><category term="internship" /><category term="interviews" /><category term="GraceHopperConference" /><summary type="html"></summary></entry><entry><title type="html">Cryptography: Cracking Codes</title><link href="http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking.html" rel="alternate" type="text/html" title="Cryptography: Cracking Codes" /><published>2016-10-10T18:41:19-04:00</published><updated>2016-10-10T18:41:19-04:00</updated><id>http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking</id><content type="html" xml:base="http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking.html">&lt;p&gt;I did the problem below as an optional programming assignment for the course Cryptography on Coursera, offered by the University of Maryland in their Cybersecurity Specialization.&lt;/p&gt;
+&lt;p&gt;Now, I look forward to the future. Just gotta finish my senior thesis first :) After GHC, I’m more aware of my status as a woman in tech than ever. We’ve all seen stories about the current situation in the tech industry regarding diversity, but I always have hopes, maybe a little more than allowed, in everything :)&lt;/p&gt;</content><author><name>site.author</name></author><category term="internship" /><category term="interviews" /><category term="Grace Hopper Conference" /><summary type="html"></summary></entry><entry><title type="html">Configure hostednetwork (WiFi Hotspot) on Windows 7</title><link href="http://localhost:4000/computer/networking/2016/12/20/set-up-wifi-hostednetwork-with-Windows7.html" rel="alternate" type="text/html" title="Configure hostednetwork (WiFi Hotspot) on Windows 7" /><published>2016-12-20T17:41:19-05:00</published><updated>2016-12-20T17:41:19-05:00</updated><id>http://localhost:4000/computer/networking/2016/12/20/set-up-wifi-hostednetwork-with-Windows7</id><content type="html" xml:base="http://localhost:4000/computer/networking/2016/12/20/set-up-wifi-hostednetwork-with-Windows7.html">&lt;p&gt;A few years ago I visited a home where there was only a Dell desktop with Windows 7 and cabled Internet in the house, and no WiFi. My host gave me the administrator account on the computer to use while she went on vacation. I wanted to use wifi on my laptop and phone so badly, so I tried to figure out whether it was possible to set up a WiFi hotspot on this desktop. It took me more hours than I’d like to admit, so to save you some pain in the posterior, below are the steps to follow. (It might work on other Windows versions too, but no guarantee).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make sure your hardware supports a wireless hotspot, and is connected to the Internet. Google if needed. You probably will need to know the brand and model number of your computer. If yes, continue. If no, sorry - I guess you’ll have to buy a WiFi hub/router/etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In File Explorer, search for a folder named &lt;code class=&quot;highlighter-rouge&quot;&gt;RtBackup&lt;/code&gt;, delete all files in it, then changed the folder’s name to ANYTHING other than its original name. The last time I did this hack, this folder resides in &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Windows\System32\LogFiles\WMI&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to &lt;strong&gt;Start&lt;/strong&gt; and search for &lt;strong&gt;Windows Services&lt;/strong&gt; tool. &lt;em&gt;*IMPORTANT:&lt;/em&gt; Start the &lt;strong&gt;Windows Event Log&lt;/strong&gt; service FIRST. Then start &lt;strong&gt;SSTP (Secure Socket Tunneling Protocol Service)&lt;/strong&gt;. Without these 2, the rest won’t work. By “the rest,” I mean to start the following services:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Application Layer Gateway Service&lt;/li&gt;
+  &lt;li&gt;Network Connections&lt;/li&gt;
+  &lt;li&gt;Network Location Awareness (NLA)&lt;/li&gt;
+  &lt;li&gt;Plug And Play&lt;/li&gt;
+  &lt;li&gt;Remote Access Auto Connection Manager&lt;/li&gt;
+  &lt;li&gt;Remote Access Connection Manager&lt;/li&gt;
+  &lt;li&gt;Remote Procedure Call (RPC)&lt;/li&gt;
+  &lt;li&gt;Telephony&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After the little hack above, we are ready to follow the official instructions posted on Dell’s website at &lt;a href=&quot;http://www.dell.com/support/article/us/en/04/SLN208643/EN&quot;&gt;http://www.dell.com/support/article/us/en/04/SLN208643/EN&lt;/a&gt;. The entire content of this article is reproduced here for your convenience.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;The adapter for the connection is Microsoft Virtual WiFi Miniport Adapter. If there is problem setting this up, go to Start -&amp;gt; search for Device Manager -&amp;gt; Network -&amp;gt; reinstall driver for this adapter.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hit the Start button, and type “Command Prompt” or “cmd” on the search box. If your computer is based on Windows 8, you’ll need to press the keyboard’s Windows logo key to switch to the system’s Modern UI Style and type “Command Prompt” or “cmd.” Run Command Prompt with admin rights. To do that, right-click on the Command Prompt icon and select “Run as administrator.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Type “netsh wlan show drivers” (without the quotation marks) in Command Prompt to check whether or not your computer supports a hosted network. The “Hosted network supported” field should indicate “Yes” if your unit supports WiFi sharing. If it says “No,” you’ll have to download the corresponding driver for your WiFi adapter first before proceeding.
+&lt;img src=&quot;http://localhost:4000\assets\images\20161220wifiWin1.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To create a hotspot, type “netsh wlan set hostednetwork mode=allow ssid=yournetworkname key=yournetworkpassword,” and hit Enter on your keyboard.
+Remember, “ssid” refers to the WiFi hotspot’s name while “key” is said network’s password. You can also use the aforementioned command to change the hotspot’s name and password.
+&lt;img src=&quot;http://localhost:4000\assets\images\20161220wifiWin2.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To get the hotspot up and running, type “netsh wlan start hostednetwork.” Make sure your computer’s WiFi adapter is also switched on, or the hotspot won’t work at all.
+&lt;img src=&quot;http://localhost:4000\assets\images\20161220wifiWin3.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Again, hit the Start button. Type “Network and Sharing Center,” and left-click on it. If you’re using a Windows-based unit, you probably know what to do by now. (Switch to Modern UI Style, and type “Network and Sharing Center.”)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select “Change adapter settings,” which can be found on the left-hand side of the window. Both the network connection you want to share and your newly created WiFi hotspot are shown here. Choose the network connection you wish to share. Right click on it, select “Properties,” and go to the “Sharing” tab. Check the option “Allow other network users to connect through this computer’s Internet connection.” This time, select the WiFi hotspot you created earlier.
+&lt;img src=&quot;http://localhost:4000\assets\images\20161220wifiWin4.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To turn off your hotspot, type “netsh wlan stop hostednetwork” in Command Prompt.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Best of luck! I hope you won’t have to spend so much time wading through useless answers on Microsoft’s help forum or Yahoo! Answers like I did :)&lt;/p&gt;</content><author><name>site.author</name></author><category term="computer networking" /><category term="windows7" /><category term="WiFi" /><summary type="html">A few years ago I visited a home where there was only a Dell desktop with Windows 7 and cabled Internet in the house, and no WiFi. My host gave me the administrator account on the computer to use while she went on vacation. I wanted to use wifi on my laptop and phone so badly, so I tried to figure out whether it was possible to set up a WiFi hotspot on this desktop. It took me more hours than I’d like to admit, so to save you some pain in the posterior, below are the steps to follow. (It might work on other Windows versions too, but no guarantee).</summary></entry><entry><title type="html">Cryptography: Cracking Codes</title><link href="http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking.html" rel="alternate" type="text/html" title="Cryptography: Cracking Codes" /><published>2016-10-10T18:41:19-04:00</published><updated>2016-10-10T18:41:19-04:00</updated><id>http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking</id><content type="html" xml:base="http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking.html">&lt;p&gt;I did the problem below as an optional programming assignment for the course Cryptography on Coursera, offered by the University of Maryland in their Cybersecurity Specialization.&lt;/p&gt;
 
 &lt;h4 id=&quot;problem-statement&quot;&gt;Problem Statement:&lt;/h4&gt;
 &lt;p&gt;&lt;em&gt;Numbered below are 7 ciphertexts, each of which was generated by encrypting some 31-character ASCII plaintext with the one-time pad using the same key (code for the encryption program used is given below). Decrypt them and recover all 7 plaintexts, each of which is a grammatically correct English sentence. Note: for this problem it is easiest to use a combination of automated analysis plus human insight and even occasional guessing. As long as you can decrypt them all, it doesn’t matter how you do it.&lt;/em&gt;&lt;/p&gt;

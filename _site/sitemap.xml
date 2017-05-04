@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/misc/2017/05/03/neuro-AI.html</loc>
+<lastmod>2017-05-03T11:41:19-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/interviews/2017/03/17/ghc.html</loc>
 <lastmod>2017-03-17T18:41:19-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/computer/networking/2016/12/20/set-up-wifi-hostednetwork-with-Windows7.html</loc>
+<lastmod>2016-12-20T17:41:19-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/coursera/2016/10/10/coursera-cryptography-code-cracking.html</loc>

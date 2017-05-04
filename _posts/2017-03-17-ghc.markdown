@@ -6,7 +6,7 @@ categories: Interviews
 tag: 
 - internship
 - interviews
-- GraceHopperConference
+- Grace Hopper Conference
 headerImage: true
 blog: true
 hidden: false # count this post in blog pagination
